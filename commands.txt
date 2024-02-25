@@ -1,0 +1,13 @@
+..\celery-env\Scripts\activate
+celery -A celerydjango  worker -l info
+
+ celery -A celerydjango  worker  --pool=solo --loglevel=info    
+ # start celery worker with the gevent pool
+$ celery worker --app=worker.app --pool=gevent --concurrency=100
+
+Celery uses four execution pool 
+prefork
+threads
+solo
+eventlet
+gevent
